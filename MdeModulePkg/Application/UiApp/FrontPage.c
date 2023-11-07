@@ -1152,7 +1152,7 @@ UpdateFrontPageBannerStrings (
 
     StrCatS (Model, 0x60 / sizeof (CHAR16), L"Model: ");
     //STR_FRONT_PAGE_COMPUTER_MODEL
-    StrCatS (Model, 0x60 / sizeof (CHAR16), "NS50AU");
+    StrCatS (Model, 0x60 / sizeof (CHAR16), L"NS50AU");
 
     TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_COMPUTER_MODEL);
     HiiSetString (gFrontPagePrivate.HiiHandle, TokenToUpdate, Model, NULL);
