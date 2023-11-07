@@ -1141,20 +1141,20 @@ UpdateFrontPageBannerStrings (
     GetOptionalStringByIndex ((CHAR8*)((UINT8*)SmbiosTable.Raw + SmbiosTable.Hdr->Length), ModelIdx, &ProductName);
     GetOptionalStringByIndex ((CHAR8*)((UINT8*)SmbiosTable.Raw + SmbiosTable.Hdr->Length), ManIdx, &Manufacturer);
 
-    StrCatS (Title, 0x60 / sizeof (CHAR16), Manufacturer);
-    StrCatS (Title, 0x60 / sizeof (CHAR16), L" ");
-    StrCatS (Title, 0x60 / sizeof (CHAR16), ProductName);
+    //STR_FRONT_PAGE_TITLE
+    StrCatS (Title, 0x60 / sizeof (CHAR16), L"Clevo NS50AU");
 
-    //TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_TITLE);
+    TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_TITLE);
     HiiSetString (gFrontPagePrivate.HiiHandle, TokenToUpdate, Title, NULL);
 
     VersionIdx = SmbiosTable.Type1->Version;
     GetOptionalStringByIndex ((CHAR8*)((UINT8*)SmbiosTable.Raw + SmbiosTable.Hdr->Length), VersionIdx, &ProductVersion);
 
     StrCatS (Model, 0x60 / sizeof (CHAR16), L"Model: ");
-    StrCatS (Model, 0x60 / sizeof (CHAR16), ProductVersion);
+    //STR_FRONT_PAGE_COMPUTER_MODEL
+    StrCatS (Model, 0x60 / sizeof (CHAR16), "NS50AU");
 
-    //TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_COMPUTER_MODEL);
+    TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_COMPUTER_MODEL);
     HiiSetString (gFrontPagePrivate.HiiHandle, TokenToUpdate, Model, NULL);
 
     FreePool (Model);
