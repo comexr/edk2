@@ -11,8 +11,8 @@
 
 #langdef   en-US "English"
 
-#string STR_FRONT_PAGE_TITLE           #language en-US  "Front Page"
-#string STR_FRONT_PAGE_COMPUTER_MODEL  #language en-US  "NS50AU"
+#string STR_FRONT_PAGE_TITLE           #language en-US  "Clevo NS50AU"
+#string STR_FRONT_PAGE_COMPUTER_MODEL  #language en-US  "Model: NS50AU"
 #string STR_FRONT_PAGE_BIOS_VERSION    #language en-US  "<bios>"
 #string STR_FIRMWARE_INFO              #language en-US  "Firmware Configuration Information"
 #string STR_BOOT_DEFAULT_PROMPT        #language en-US  "Boot Default"

@@ -1145,7 +1145,7 @@ UpdateFrontPageBannerStrings (
     StrCatS (Title, 0x60 / sizeof (CHAR16), L" ");
     StrCatS (Title, 0x60 / sizeof (CHAR16), ProductName);
 
-    TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_TITLE);
+    //TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_TITLE);
     HiiSetString (gFrontPagePrivate.HiiHandle, TokenToUpdate, Title, NULL);
 
     VersionIdx = SmbiosTable.Type1->Version;
@@ -1154,7 +1154,7 @@ UpdateFrontPageBannerStrings (
     StrCatS (Model, 0x60 / sizeof (CHAR16), L"Model: ");
     StrCatS (Model, 0x60 / sizeof (CHAR16), ProductVersion);
 
-    TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_COMPUTER_MODEL);
+    //TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_COMPUTER_MODEL);
     HiiSetString (gFrontPagePrivate.HiiHandle, TokenToUpdate, Model, NULL);
 
     FreePool (Model);
