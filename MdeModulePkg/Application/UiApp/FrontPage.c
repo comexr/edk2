@@ -1142,7 +1142,7 @@ UpdateFrontPageBannerStrings (
     GetOptionalStringByIndex ((CHAR8*)((UINT8*)SmbiosTable.Raw + SmbiosTable.Hdr->Length), ManIdx, &Manufacturer);
 
     //STR_FRONT_PAGE_TITLE
-    StrCatS (Title, 0x60 / sizeof (CHAR16), L"Clevo NS50AU");
+    StrCatS (Title, 0x60 / sizeof (CHAR16), L"[LAPTOP MODEL]");
 
     TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_TITLE);
     HiiSetString (gFrontPagePrivate.HiiHandle, TokenToUpdate, Title, NULL);
@@ -1152,7 +1152,7 @@ UpdateFrontPageBannerStrings (
 
     StrCatS (Model, 0x60 / sizeof (CHAR16), L"Model: ");
     //STR_FRONT_PAGE_COMPUTER_MODEL
-    StrCatS (Model, 0x60 / sizeof (CHAR16), L"NS50AU");
+    StrCatS (Model, 0x60 / sizeof (CHAR16), L"[LAPTOP MODEL]");
 
     TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_COMPUTER_MODEL);
     HiiSetString (gFrontPagePrivate.HiiHandle, TokenToUpdate, Model, NULL);
