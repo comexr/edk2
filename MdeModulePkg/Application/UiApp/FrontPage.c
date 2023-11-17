@@ -1141,7 +1141,7 @@ UpdateFrontPageBannerStrings (
     GetOptionalStringByIndex ((CHAR8*)((UINT8*)SmbiosTable.Raw + SmbiosTable.Hdr->Length), ModelIdx, &ProductName);
     GetOptionalStringByIndex ((CHAR8*)((UINT8*)SmbiosTable.Raw + SmbiosTable.Hdr->Length), ManIdx, &Manufacturer);
 
-    StrCatS (Title, 0x60 / sizeof (CHAR16), Manufacturer);
+    //StrCatS (Title, 0x60 / sizeof (CHAR16), Manufacturer);
     StrCatS (Title, 0x60 / sizeof (CHAR16), L" ");
     StrCatS (Title, 0x60 / sizeof (CHAR16), ProductName);
 
