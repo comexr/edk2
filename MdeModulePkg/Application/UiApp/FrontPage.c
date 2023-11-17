@@ -1141,8 +1141,9 @@ UpdateFrontPageBannerStrings (
     GetOptionalStringByIndex ((CHAR8*)((UINT8*)SmbiosTable.Raw + SmbiosTable.Hdr->Length), ModelIdx, &ProductName);
     GetOptionalStringByIndex ((CHAR8*)((UINT8*)SmbiosTable.Raw + SmbiosTable.Hdr->Length), ManIdx, &Manufacturer);
 
-    //STR_FRONT_PAGE_TITLE
-    StrCatS (Title, 0x60 / sizeof (CHAR16), L"Clevo [MODEL]");
+    StrCatS (Title, 0x60 / sizeof (CHAR16), Manufacturer);
+    StrCatS (Title, 0x60 / sizeof (CHAR16), L" ");
+    StrCatS (Title, 0x60 / sizeof (CHAR16), ProductName);
 
     TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_TITLE);
     HiiSetString (gFrontPagePrivate.HiiHandle, TokenToUpdate, Title, NULL);
@@ -1151,8 +1152,7 @@ UpdateFrontPageBannerStrings (
     GetOptionalStringByIndex ((CHAR8*)((UINT8*)SmbiosTable.Raw + SmbiosTable.Hdr->Length), VersionIdx, &ProductVersion);
 
     StrCatS (Model, 0x60 / sizeof (CHAR16), L"Model: ");
-    //STR_FRONT_PAGE_COMPUTER_MODEL
-    StrCatS (Model, 0x60 / sizeof (CHAR16), L"[MODEL]");
+    StrCatS (Model, 0x60 / sizeof (CHAR16), ProductVersion);
 
     TokenToUpdate = STRING_TOKEN (STR_FRONT_PAGE_COMPUTER_MODEL);
     HiiSetString (gFrontPagePrivate.HiiHandle, TokenToUpdate, Model, NULL);
