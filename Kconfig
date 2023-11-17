@@ -120,7 +120,7 @@ config MAINBOARD_SMBIOS_PRODUCT_NAME
 	default "Galago Pro" if BOARD_SYSTEM76_GALP7
 	default "Gazelle" if BOARD_SYSTEM76_GAZE18
 	default "Lemur Pro" if BOARD_SYSTEM76_LEMP12
-	default "Clevo PE60RNE" if BOARD_SYSTEM76_ORYP11
+	default "Clevo" if BOARD_SYSTEM76_ORYP11
 	default "Serval WS" if BOARD_SYSTEM76_SERW13
 
 config MAINBOARD_VERSION
